@@ -17,7 +17,7 @@ spring:
     config:
       server:
         git:
-          uri: https://code.aliyun.com/jing/spring-boot-cloud/tree/master/
+          uri: https://github.com/myzhijie/spring-boot-cloud
           search-paths: config-repo
   rabbitmq:
     host: rabbitmq
