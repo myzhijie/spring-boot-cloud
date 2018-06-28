@@ -20,3 +20,24 @@ security:
       accessTokenUri: http://${authserver.hostname}:${authserver.port}${authserver.contextPath}/oauth/token
       grant-type: client_credentials
       scope: server
+
+spring:
+  datasource:
+    name: localdb
+    url: jdbc:mysql://localhost:3306/localdb?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&zeroDateTimeBehavior=convertToNull
+    username: ace
+    password: 123456
+    driver-class-name: com.mysql.jdbc.Driver
+    initialSize: 1
+    minIdle: 10
+    maxActive: 10
+    maxWait: 60000
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: SELECT 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: false
+    maxPoolPreparedStatementPerConnectionSize: 20
+    filters: stat
